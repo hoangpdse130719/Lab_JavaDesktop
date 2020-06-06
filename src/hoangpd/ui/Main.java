@@ -29,7 +29,7 @@ public class Main extends javax.swing.JFrame {
     public Main() throws Exception {
         initComponents();
         View();
-        chkSupColloborating.setEnabled(false);
+        
 
     }
 
@@ -86,8 +86,8 @@ public class Main extends javax.swing.JFrame {
         itemModel.addColumn("Unit");
         itemModel.addColumn("Price");
         itemModel.addColumn("Supply");
-        ArrayList<SupplierDTO> supplierList = new ArrayList<>();
-        ArrayList<ItemDTO> itemList = new ArrayList<>();
+        ArrayList<SupplierDTO> supplierList ;
+        ArrayList<ItemDTO> itemList;
 
         ItemDAO item = new ItemDAO();
         SupplierDAO supplier = new SupplierDAO();
@@ -518,7 +518,7 @@ public class Main extends javax.swing.JFrame {
                             View();
                             btnSupAddNewActionPerformed(evt);
                         } else {
-                            System.out.println("Please try again");
+                            JOptionPane.showMessageDialog(this, "Please try again");
                         }
 
                     }
@@ -598,7 +598,7 @@ public class Main extends javax.swing.JFrame {
                             btnIteamAddNewActionPerformed(evt);
 
                         } else {
-                            System.out.println("Please try again");
+                            JOptionPane.showMessageDialog(this, "Please try again");
                         }
 
                     }
